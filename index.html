@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy Connect | JIIT</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">🤝</div>
+                <h1>Study Buddy <span class="logo-highlight">Connect</span></h1>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                <a href="#profile" class="nav-link"><i class="fas fa-user"></i> Profile</a>
+                <a href="#find" class="nav-link"><i class="fas fa-search"></i> Find Buddy</a>
+                <a href="#chat" class="nav-link"><i class="fas fa-comments"></i> Chat</a>
+                <a href="#video" class="nav-link"><i class="fas fa-video"></i> Video Call</a>
+            </div>
+            
+            <div class="nav-buttons">
+                <button class="btn-login"><i class="fas fa-sign-in-alt"></i> Login</button>
+                <button class="btn-register"><i class="fas fa-user-plus"></i> Register</button>
+            </div>
+        </div>
+    </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-container">
+        <div class="hero-content">
+            
+            <!-- ========== ADD YOUR LOGO HERE ========== -->
+            <div class="logo-hero">
+                <img src="stydy.jpeg" alt="Study Buddy Logo" class="hero-logo">
+            </div>
+            <!-- ========== LOGO ADDED ========== -->
+            
+            <h1 class="hero-title">Don't Study <span class="hero-highlight">Alone</span></h1>
+            <p class="hero-subtitle">Connect with JIIT students, solve doubts together, and ace your exams with Study Buddy Connect.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn-primary" id="createProfileBtn">
+                    <i class="fas fa-user-plus"></i> Create Profile
+                </button>
+                <button class="btn-secondary" id="exploreBtn">
+                    <i class="fas fa-search"></i> Find Study Buddy
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+  <section class="profile-section" id="profile">
+        <div class="section-header">
+            <h2 class="section-title"><i class="fas fa-id-card"></i> Student Profile</h2>
+            <p class="section-subtitle">Complete your profile to find study buddies</p>
+        </div>
+        
+        <div class="profile-container">
+            <div class="profile-card" id="profileDisplay">
+                <div class="profile-header">
+                    <div class="profile-avatar" id="displayAvatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 id="displayName">Guest Student</h3>
+                    <p class="profile-batch" id="displayBatch">Batch: Not Set</p>
+                </div>
+                
+                <div class="profile-info">
+                    <div class="info-item">
+                        <span class="info-label"><i class="fas fa-university"></i> University:</span>
+                        <span id="displayUniversity">JIIT</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label"><i class="fas fa-id-badge"></i> University ID:</span>
+                        <span id="displayId">Not Set</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label"><i class="fas fa-graduation-cap"></i> Batch:</span>
+                        <span id="displayBatchYear">2023-2027</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label"><i class="fas fa-book"></i> Branch:</span>
+                        <span id="displayBranch">CSE</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label"><i class="fas fa-phone"></i> Phone:</span>
+                        <span id="displayPhone">+91 XXXXX XXXXX</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label"><i class="fas fa-envelope"></i> Email:</span>
+                        <span id="displayEmail">student@jiit.ac.in</span>
+                    </div>
+                </div>
+                
+                <button class="btn-edit" id="editProfileBtn">
+                    <i class="fas fa-edit"></i> Edit Profile
+                </button>
+            </div>
+            
+            <div class="profile-form" id="profileForm">
+                <h3><i class="fas fa-edit"></i> Edit Your Profile</h3>
+                
+                <form id="studentProfileForm">
+                    <div class="form-group">
+                        <label for="studentName"><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="studentName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="universityId"><i class="fas fa-id-badge"></i> University ID</label>
+                            <input type="text" id="universityId" placeholder="e.g., JIIT/2023/001" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="batch"><i class="fas fa-calendar"></i> Batch</label>
+                            <select id="batch" required>
+                                <option value="">Select Batch</option>
+                                <option value="2021-2025">2021-2025</option>
+                                <option value="2022-2026">2022-2026</option>
+                                <option value="2023-2027">2023-2027</option>
+                                <option value="2024-2028">2024-2028</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="branch"><i class="fas fa-graduation-cap"></i> Branch</label>
+                        <select id="branch" required>
+                            <option value="">Select Branch</option>
+                            <option value="CSE">Computer Science & Engineering</option>
+                            <option value="IT">Information Technology</option>
+                            <option value="ECE">Electronics & Communication</option>
+                            <option value="EEE">Electrical & Electronics</option>
+                            <option value="ME">Mechanical Engineering</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+91 9876543210" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="email" placeholder="name@jiit.ac.in" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-book"></i> Preferred Subjects</label>
+                        <div class="subject-checkboxes">
+                            <label><input type="checkbox" name="subjects" value="DSA" checked> DSA</label>
+                            <label><input type="checkbox" name="subjects" value="Web Dev"> Web Development</label>
+                            <label><input type="checkbox" name="subjects" value="DBMS"> DBMS</label>
+                            <label><input type="checkbox" name="subjects" value="OS"> Operating Systems</label>
+                            <label><input type="checkbox" name="subjects" value="CN"> Computer Networks</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-save">
+                            <i class="fas fa-save"></i> Save Profile
+                        </button>
+                        <button type="button" class="btn-cancel" id="cancelEditBtn">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="buddies-section" id="find">
+        <div class="section-header">
+            <h2 class="section-title"><i class="fas fa-users"></i> Find Study Buddies</h2>
+            <p class="section-subtitle">Connect with students studying similar subjects</p>
+        </div>
+        
+        <div class="buddies-grid" id="buddiesGrid">
+        </div>
+    </section>
+<section class="public-chat-section" id="publicChat">
+    <div class="section-header">
+        <h2 class="section-title"><i class="fas fa-globe"></i> Public Chat Room</h2>
+        <p class="section-subtitle">Chat with all JIIT students. Be respectful!</p>
+    </div>
+    
+    <div class="public-chat-container">
+        <div class="chat-rules">
+            <h3><i class="fas fa-shield-alt"></i> Community Rules</h3>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> No abusive language</li>
+                <li><i class="fas fa-check-circle"></i> Respect all students</li>
+                <li><i class="fas fa-check-circle"></i> Share knowledge, not spam</li>
+                <li><i class="fas fa-check-circle"></i> Use appropriate language</li>
+                <li><i class="fas fa-check-circle"></i> Report any issues</li>
+            </ul>
+            <div class="online-count">
+                <i class="fas fa-users"></i>
+                <span id="onlineCount">25</span> students online
+            </div>
+        </div>
+        
+        <div class="public-chat-main">
+            <div class="chat-header">
+                <h3><i class="fas fa-hashtag"></i> general-chat</h3>
+                <div class="chat-controls">
+                    <button class="btn-refresh" id="refreshChat">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                    <button class="btn-clear" id="clearChat">
+                        <i class="fas fa-trash"></i> Clear
+                    </button>
+                </div>
+            </div>
+            
+            <div class="public-messages" id="publicMessages">
+                <div class="system-message">
+                    <i class="fas fa-info-circle"></i>
+                    Welcome to Study Buddy Connect Public Chat! Be respectful to everyone.
+                </div>
+            </div>
+            
+            <div class="public-chat-input">
+                <div class="user-info">
+                    <span class="user-badge">
+                        <i class="fas fa-user-graduate"></i>
+                        <span id="currentUserName">Guest</span>
+                    </span>
+                </div>
+                <input type="text" id="publicMessageInput" placeholder="Type your message to everyone...">
+                <button id="sendPublicMessage">
+                    <i class="fas fa-paper-plane"></i> Send
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="chat-section" id="chat">
+        <div class="section-header">
+            <h2 class="section-title"><i class="fas fa-comments"></i> Real-time Chat</h2>
+            <p class="section-subtitle">Chat securely with your study buddies</p>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-sidebar">
+                <div class="chat-users" id="chatUsers">
+                </div>
+            </div>
+            
+            <div class="chat-main">
+                <div class="chat-header">
+                    <h3><i class="fas fa-user"></i> Select a buddy to chat</h3>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                </div>
+                
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Type your message..." disabled>
+                    <button id="sendMessageBtn" disabled>
+                        <i class="fas fa-paper-plane"></i> Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="video-section" id="video">
+        <div class="section-header">
+            <h2 class="section-title"><i class="fas fa-video"></i> Video Call</h2>
+            <p class="section-subtitle">Start a video call with your study buddy</p>
+        </div>
+        
+        <div class="video-container">
+            <div class="video-demo">
+                <div class="video-placeholder">
+                    <i class="fas fa-video fa-4x"></i>
+                    <h3>Start Video Call</h3>
+                    <p>Click below to start a Jitsi video call</p>
+                    <button class="btn-video" id="startVideoBtn">
+                        <i class="fas fa-play-circle"></i> Start Video Call
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon">🤝</div>
+                    <h2>Study Buddy <span class="logo-highlight">Connect</span></h2>
+                </div>
+                <p>Connecting JIIT students for collaborative learning</p>
+                <p>© 2023 Study Buddy Connect | Hackathon Project</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
