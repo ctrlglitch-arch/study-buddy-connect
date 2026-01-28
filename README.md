@@ -27,7 +27,7 @@ A platform for JIIT students to connect, study together, and share resources.
 - **Future:** More features planned
 
 ## 👨‍💻 Developer
-[Your Name] - First Year JIIT Student  
+[KUSHAGRA GARG] - First Year JIIT Student  
 Learning web development through hands-on projects
 
 ---
